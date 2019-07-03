@@ -2,7 +2,7 @@
 matlab code to analyze EEG travelling wave data
 
 the data used in the code are available at:
-https://www.dropbox.com/sh/7i3m3862w0b37x6/AABy8l0YeQhkutOG3sGCb6Xka?dl=0
+https://osf.io/nc4rg/?view_only=bb06fe996d1f49b285dc25464eec7ac7
 
 startingFunction() is the pipeline. 
 First part load the data, the other three parts analyze different dataset. 
