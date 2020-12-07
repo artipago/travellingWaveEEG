@@ -9,4 +9,4 @@ First part load the data, the other three parts analyze different dataset.
 There are indeed 3 datasets: Echoes, Input & Closed.
 
 Please for details refer to the paper "Alpha oscillations and travelling waves: signatures of predictive coding?" by Andrea Alamia & Rufin VanRullen 
-https://www.biorxiv.org/content/biorxiv/early/2018/11/07/464933.full.pdf
+https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000487
