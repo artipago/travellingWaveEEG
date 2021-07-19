@@ -6,6 +6,10 @@ function [logRatio,bwValue,bwTempFreq,bwSpatFreq,fwValue,fwTempFreq,fwSpatFreq]=
 % if simmetryFlag==1 it takes the maximum value over both quadrant, and its symmetric in the other quadrant. 
 % if simmetryFlag==0 it takes maximum values in each quadrant, indepdently of the other (no simmetry). 
 
+    chosenElectrodes = [29 30 31 32 48 47 38]; %corresponding to the midline electrodes [Oz, POz, Pz, CPz, Cz, FCz, Fz] 
+%     channelsLabel ={'Fp1','AF7','AF3','F1','TP9','F5h','F7','FT7','FC5h','PO9','FC1','C1','C3','C5','T7','TP7','CP5','CP3','CP1','P1','I1','P5h','P7','P9','PO7','PO3','O1','Iz','Oz','POz','Pz','CPz','Fpz','Fp2','AF8','AF4','AFz','Fz','F2','TP10','F6h','F8','FT8','FC6h','PO10','FC2','FCz','Cz','C2','C4','C6','T8','TP8','CP6','CP4','CP2','P2','I2','P6h','P8','P10','PO8','PO4','O2','EXG1','EXG2','EXG3','EXG4','EXG5','EXG6','EXG7','EXG8'};
+    data = data(chosenElectrodes,:);
+    
     numberElectrodes=size(data,1);
     yElec=1:numberElectrodes;
     durationSignal=size(data,2)/samplingRate; %it's in second.
@@ -52,7 +56,6 @@ function [logRatio,bwValue,bwTempFreq,bwSpatFreq,fwValue,fwTempFreq,fwSpatFreq]=
             %maximuml is in the BW
             bwValue=a2;
             fwValue= sbj2DFFT(-b(b2)+numberElectrodes+1,b2+ceil(length(fx)/2)+round(f1/dF));
-
             bwSpatFreq=fy(b(b2));
             fwSpatFreq=fy(b(b2)-(ceil(length(yElec)/2))); %or +1
         end
